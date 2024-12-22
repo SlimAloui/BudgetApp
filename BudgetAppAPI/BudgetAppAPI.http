@@ -1,0 +1,86 @@
+# Créer un utilisateur
+POST http://localhost:5002/api/Utilisateur
+Content-Type: application/json
+
+{
+  "nom": "John Doe",
+  "email": "john.doe@example.com",
+  "motDePasse": "password123"
+}
+
+###
+# Créer une catégorie
+POST http://localhost:5002/api/Categorie
+Content-Type: application/json
+
+{
+  "nom": "Alimentation"
+}
+
+###
+# Créer un compte
+POST http://localhost:5002/api/Compte
+Content-Type: application/json
+
+{
+  "utilisateurId": 1,
+  "nom": "Compte Bancaire",
+  "typeCompte": "Bancaire",
+  "soldeCash": 1000.00
+}
+
+###
+# Récupérer un compte
+GET http://localhost:5002/api/Compte/1
+Content-Type: application/json
+
+###
+# Récupérer le solde d'un compte
+GET http://localhost:5002/api/Compte/1/solde
+Content-Type: application/json
+
+###
+# Créer une transaction normale
+POST http://localhost:5002/api/TransactionNormale
+Content-Type: application/json
+
+{
+  "utilisateurId": 1,
+  "categorieId": 1,
+  "compteId": 1,
+  "montant": 50.00,
+  "dateTransaction": "2023-12-22",
+  "typeTransaction": "depense",
+  "description": "Achat de nourriture"
+}
+
+###
+# Créer un actif
+POST http://localhost:5002/api/Actif
+Content-Type: application/json
+
+{
+  "compteId": 1,
+  "nomActif": "Action ABC",
+  "quantite": 100.00,
+  "valeurUnitaire": 50.00
+}
+
+###
+# Créer une transaction boursière
+POST http://localhost:5002/api/TransactionBoursiere
+Content-Type: application/json
+
+{
+  "utilisateurId": 1,
+  "compteId": 1,
+  "actifId": 1,
+  "quantite": 10.00,
+  "prixUnitaire": 50.00,
+  "taxe": 5.00,
+  "frais": 2.00,
+  "dateTransaction": "2023-12-22",
+  "typeTransaction": "achat",
+  "description": "Achat d'actions"
+}
+

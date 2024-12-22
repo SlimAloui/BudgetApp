@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "UNRwt9FNbA7k/00oxwPZi9CP51qgXxzrI3ELA0QpdKc=",
+  "Source": "BudgetAppAPI",
+  "BasePath": "_content/BudgetAppAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
